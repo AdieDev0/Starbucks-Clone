@@ -5,7 +5,7 @@ import { DiGithubBadge } from "react-icons/di";
 const Last = () => {
   return (
     <div className="bg-white p-32 w-full ">
-      <div className="flex justify-between ">
+      <div className="flex justify-between lg:inline-block">
         <div className="grid gap-5">
           <p className="text-black/90 font-bold text-2xl">About Us</p>
           <div className="grid gap-3 text-black/70">
