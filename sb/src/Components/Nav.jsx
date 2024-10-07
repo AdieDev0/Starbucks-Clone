@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import sb from "../assets/sb.png";
-import { IoIosClose } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,16 +11,27 @@ const Nav = () => {
       <div className="flex items-center px-4 md:px-9 lg:px-32 py-6 justify-between overflow-hidden">
         <div className="uppercase flex items-center gap-8 font-bold">
           {/* logo */}
-          <img src={sb} alt="/" className="lg:w-14 md:w-14 w-10" />
-          <p className="cursor-pointer text-sm hover:text-green-600 duration-200 hidden md:inline-block lg:inline-block">
+          <NavLink to="">
+            <img src={sb} alt="/" className="lg:w-14 md:w-14 w-10" />
+          </NavLink>
+          <NavLink
+            to="/menu"
+            className="cursor-pointer text-sm hover:text-green-600 duration-200 hidden md:inline-block lg:inline-block"
+          >
             Menu
-          </p>
-          <p className="cursor-pointer text-sm hover:text-green-600 duration-200 hidden md:inline-block lg:inline-block">
+          </NavLink>
+          <NavLink
+            to="/merchandise"
+            className="cursor-pointer text-sm hover:text-green-600 duration-200 hidden md:inline-block lg:inline-block"
+          >
             Merchandise
-          </p>
-          <p className="cursor-pointer text-sm hover:text-green-600 duration-200 hidden md:inline-block lg:inline-block">
+          </NavLink>
+          <NavLink
+            to="/rewards"
+            className="cursor-pointer text-sm hover:text-green-600 duration-200 hidden md:inline-block lg:inline-block"
+          >
             Rewards
-          </p>
+          </NavLink>
         </div>
         <div className="flex gap-8 font-bold items-center">
           <p className="cursor-pointer text-sm hover:text-green-600 duration-200 hidden md:inline-block lg:inline-block">
@@ -36,7 +47,7 @@ const Nav = () => {
           </div>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden lg:hidden sm:inline-block">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
@@ -72,15 +83,24 @@ const Nav = () => {
       >
         <div className="flex flex-col items-start p-6">
           <div className="grid gap-y-8">
-            <p className="cursor-pointer hover:text-green-600 duration-200 text-xl">
+            <NavLink
+              to="/menu"
+              className="cursor-pointer hover:text-green-600 duration-200 text-xl"
+            >
               Menu
-            </p>
-            <p className="cursor-pointer hover:text-green-600 duration-200 text-xl">
+            </NavLink>
+            <NavLink
+              to="/merchandise"
+              className="cursor-pointer hover:text-green-600 duration-200 text-xl"
+            >
               Merchandise
-            </p>
-            <p className="cursor-pointer hover:text-green-600 duration-200 text-xl">
+            </NavLink>
+            <NavLink
+              to="/rewards"
+              className="cursor-pointer hover:text-green-600 duration-200 text-xl"
+            >
               Rewards
-            </p>
+            </NavLink>
           </div>
           <hr className="w-full my-5 border-2" />
           <div className="flex flex-col gap-5">
