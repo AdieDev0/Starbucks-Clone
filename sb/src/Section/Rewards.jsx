@@ -11,6 +11,11 @@ import cup from "../assets/cup.svg";
 import phonecup from "../assets/phonecup.svg";
 import grab from "../assets/grab.svg";
 import lazada from "../assets/lazada.svg";
+import { NavLink } from "react-router-dom";
+import appsb from "../assets/AppSB.jpg";
+import appstore from "../assets/appstore.svg";
+import playstore from "../assets/playstore.svg";
+import Last from "../Components/Last";
 const Rewards = () => {
   return (
     <>
@@ -35,11 +40,14 @@ const Rewards = () => {
             <h4 className="text-white text-lg font-medium">
               Join now to start collecting Stars.
             </h4>
-            <button className="bg-green-700 text-white font-bold px-5 py-1 rounded-full my-5 md:my-10">
-              Join now
-            </button>
+            <NavLink to="/">
+              <button className="bg-green-700 text-white font-bold px-5 py-1 rounded-full my-5 md:my-10">
+                Join now
+              </button>
+            </NavLink>
+
             <p className="text-white text-lg font-medium">
-              <a href="#" className="underline">
+              <a href="/" className="underline">
                 Download and join in the app
               </a>{" "}
               for the best experience.
@@ -243,11 +251,135 @@ const Rewards = () => {
               collect 1 Star for every ₱40 spent on Starbucks orders on delivery
               or e-Commerce.
             </p>
-            <button className="text-white text-lg py-2 font-medium bg-green-700 hover:bg-green-600 duration-200 mx-auto rounded-full w-full md:w-60 mt-5">
-              Join Starbucks Rewards
-            </button>
+            <NavLink to="/">
+              <button className="text-white text-lg py-2 font-medium bg-green-700 hover:bg-green-600 duration-200 mx-auto rounded-full w-full md:w-60 mt-5">
+                Join Starbucks Rewards
+              </button>
+            </NavLink>
           </div>
         </div>
+
+        {/* Download the app for the best experience */}
+        <div className="bg-[#F9F9F9] h-auto md:h-60 p-5 md:p-10">
+          <p className="text-center text-black text-2xl md:text-3xl font-semibold">
+            Download the app for the best experience
+          </p>
+          {/* Overflow */}
+          <div className="w-full md:w-[900px] flex flex-col md:flex-row gap-5 rounded-xl bg-white items-center mx-auto mt-5 relative">
+            <img
+              src={appsb}
+              alt=""
+              className="w-full md:w-96 object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none"
+            />
+            <div className="items-center p-5">
+              <p className="text-sm md:text-xl text-black mb-5 md:my-10">
+                Load your account, pay with your phone, track your Stars and
+                redeem Rewards. The app might just be the best part of
+                Starbucks® Rewards.
+              </p>
+              <div className="flex justify-center gap-5">
+                <img src={appstore} alt="/" className="w-24 md:w-36" />
+                <img src={playstore} alt="/" className="w-24 md:w-36" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Frequently Asked Questions */}
+        <div className="bg-[#F1F0EC] h-auto pt-20 pb-16 px-5 md:pt-44 md:px-28 lg:px-72">
+          <p className="text-black text-2xl md:text-3xl mb-5">
+            Frequently Asked Questions
+          </p>
+
+          {/* ACCORDION */}
+          <div className="join join-vertical w-full shadow-xl">
+            {[
+              "How do I earn a Star?",
+              "What rewards can I redeem with Stars?",
+              "Do Stars expire?",
+              "Do Reward Vouchers expire?",
+              "What will happen to my old My Starbucks Rewards account?",
+              "What will happen to the remaining balance of my cards from the old My Starbucks Rewards?",
+              "How do I check the remaining balance of my cards from the old My Starbucks Rewards?",
+              "Will the new card issued with the remaining balance of my old cards be automatically registered to my account?",
+              "I am an existing Starbucks Rewards member, how can I earn Stars on my Lazada purchase?",
+              "When will the Stars I earned from my Lazada purchase be credited to my Starbucks Rewards account?",
+              "Can I earn Stars on purchases from other merchants on Lazada?",
+            ].map((question, index) => (
+              <div
+                key={index}
+                className="collapse collapse-arrow join-item border-stone-300 border-2"
+              >
+                <input type="radio" name="my-accordion-4" />
+                <div className="collapse-title text-black text-md font-semibold">
+                  {question}
+                </div>
+                <div className="collapse-content bg-white">
+                  <p className="text-green-800 text-sm font-medium p-2">
+                    Starting October 17, 2023, you can collect Stars by paying
+                    with your registered Starbucks card (or your registered Card
+                    in the mobile app) or thru other payment methods like cash,
+                    credit/debit cards, select e-wallets, Starbucks gift
+                    certificate or Starbucks e-Gift. You will collect 1 Star for
+                    every Php25 spent on beverage, food or merchandise purchased
+                    from our stores using a Starbucks Card. Pay with cash,
+                    credit/debit cards, select e-wallets, Starbucks gift
+                    certificate or Starbucks e-Gift and you can collect 1 Star
+                    for every Php50 spent. Stars cannot be earned on purchases
+                    of gift certificate, Starbucks Cards or Starbucks Card
+                    reloads.
+                    <br />
+                    <br />
+                    Download the Starbucks Philippines app to access your
+                    Starbucks Rewards account faster.
+                    <br />
+                    <br />
+                    For purchases in the official Starbucks online store on
+                    Lazada, once your Starbucks Rewards account has been
+                    successfully linked to your Lazada account, you will earn
+                    Stars based on the value of your purchase in the official
+                    Starbucks online store on Lazada using any type of payment –
+                    cash, debit card, credit card, Lazada wallet at the rate of
+                    1 Star for every ₱40 spent.
+                    {question }
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="divider"></div>
+          <p className="text-black text-2xl md:text-3xl mb-5">
+            More Questions?
+          </p>
+          <h3 className="text-black mb-3">
+            We want to help in any way we can. We’ve answered the most commonly
+            asked questions.{" "}
+            <a href="/" className="underline text-black/80 font-extrabold">
+              right over here.
+            </a>{" "}
+            If you can't find what you're looking for, here's how to{" "}
+            <a href="/" className="underline text-black/80 font-extrabold">
+              get in touch{" "}
+            </a>{" "}
+            with us.
+          </h3>
+
+          <p className="text-black text-2xl md:text-3xl mb-3">Terms of Use</p>
+          <h3 className="text-black">
+            For full details on Stars and Starbucks® Rewards program, read our
+            terms of use{" "}
+            <a href="/" className="underline text-black/80 font-extrabold">
+              here.
+            </a>
+            <br />
+            <br />
+            DTI Fair Trade Permit No. FTEB-177222 Series of 2023
+          </h3>
+        </div>
+
+
+        <Last/>
       </div>
     </>
   );
