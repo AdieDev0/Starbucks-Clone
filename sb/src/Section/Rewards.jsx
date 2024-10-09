@@ -6,10 +6,11 @@ import ecard from "../assets/ecard.svg";
 import star25 from "../assets/star25.svg";
 import star40 from "../assets/star40.svg";
 import star50 from "../assets/star50.svg";
-import single from '../assets/single.svg'
-import cup from '../assets/cup.svg'
-import phonecup from '../assets/phonecup.svg'
-
+import single from "../assets/single.svg";
+import cup from "../assets/cup.svg";
+import phonecup from "../assets/phonecup.svg";
+import grab from "../assets/grab.svg";
+import lazada from "../assets/lazada.svg";
 const Rewards = () => {
   return (
     <>
@@ -175,42 +176,78 @@ const Rewards = () => {
         </div>
 
         {/* Say hello to magical Rewards */}
-<div className="bg-[#1E3932] p-5 text-center">
-  <div className="justify-center">
-    <p className="text-white font-semibold text-2xl md:text-3xl mb-8">
-      Say hello to magical Rewards
-    </p>
-    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-10 md:px-48">
-      {/* Reward 1 */}
-      <div className="flex flex-col items-center w-full md:w-64 gap-4">
-        <img src={cup} alt="/" className="w-24 h-24 md:w-36 md:h-36" />
-        <p className="text-white text-sm md:text-lg font-semibold text-center mt-5">
-          Get a free drink, pastry, or slice of cake with every 100 Stars you collect.
-        </p>
-      </div>
+        <div className="bg-[#1E3932] p-5 text-center">
+          <div className="justify-center">
+            <p className="text-white font-semibold text-2xl md:text-3xl mb-8">
+              Say hello to magical Rewards
+            </p>
+            <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-10 md:px-48">
+              {/* Reward 1 */}
+              <div className="flex flex-col items-center w-full md:w-64 gap-4">
+                <img src={cup} alt="/" className="w-24 h-24 md:w-36 md:h-36" />
+                <p className="text-white text-sm md:text-lg font-semibold text-center mt-5">
+                  Get a free drink, pastry, or slice of cake with every 100
+                  Stars you collect.
+                </p>
+              </div>
 
-      {/* Reward 2 */}
-      <div className="flex flex-col items-center w-full md:w-64 gap-4">
-        <img src={single} alt="/" className="w-24 h-24 md:w-36 md:h-36" />
-        <p className="text-white text-sm md:text-lg font-semibold text-center mt-5">
-          Access exclusive perks — like collecting Stars faster with Double Star Days, and a birthday treat.
-        </p>
-      </div>
+              {/* Reward 2 */}
+              <div className="flex flex-col items-center w-full md:w-64 gap-4">
+                <img
+                  src={single}
+                  alt="/"
+                  className="w-24 h-24 md:w-36 md:h-36"
+                />
+                <p className="text-white text-sm md:text-lg font-semibold text-center mt-5">
+                  Access exclusive perks — like collecting Stars faster with
+                  Double Star Days, and a birthday treat.
+                </p>
+              </div>
 
-      {/* Reward 3 */}
-      <div className="flex flex-col items-center w-full md:w-64 gap-4">
-        <img src={phonecup} alt="/" className="w-24 h-24 md:w-36 md:h-36" />
-        <p className="text-white text-sm md:text-lg font-semibold text-center mt-5">
-          Enjoy the convenience of ordering ahead using the app.
-        </p>
-      </div>
-    </div>
-  </div>
-  <a href="/" className="underline text-white text-xs md:text-sm mt-5 inline-block">
-    *Terms & Conditions apply
-  </a>
-</div>
+              {/* Reward 3 */}
+              <div className="flex flex-col items-center w-full md:w-64 gap-4">
+                <img
+                  src={phonecup}
+                  alt="/"
+                  className="w-24 h-24 md:w-36 md:h-36"
+                />
+                <p className="text-white text-sm md:text-lg font-semibold text-center mt-5">
+                  Enjoy the convenience of ordering ahead using the app.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a
+            href="/"
+            className="underline text-white text-xs md:text-sm mt-5 inline-block"
+          >
+            *Terms & Conditions apply
+          </a>
+        </div>
 
+        {/* Keep the Rewards coming */}
+        <div className="bg-[#046240] w-full p-5">
+          <div className="bg-[#D4E9E2] text-center py-16 px-4 md:px-[200px] lg:px-[409px] grid gap-5">
+            <p className="text-black text-2xl md:text-3xl font-semibold">
+              Keep the Rewards coming
+            </p>
+            {/* LOGO */}
+            <div className="flex justify-center items-center">
+              <img src={grab} alt="" className="w-16 h-16 md:w-24 md:h-24" />
+              {/* Divider */}
+              <div className="divider divider-horizontal divider-start"></div>
+              <img src={lazada} alt="" className="w-12 h-12 md:w-20 md:h-20" />
+            </div>
+            <p className="text-black text-sm md:text-lg">
+              Link your Grab and Lazada accounts to your Starbucks® Rewards to
+              collect 1 Star for every ₱40 spent on Starbucks orders on delivery
+              or e-Commerce.
+            </p>
+            <button className="text-white text-lg py-2 font-medium bg-green-700 hover:bg-green-600 duration-200 mx-auto rounded-full w-full md:w-60 mt-5">
+              Join Starbucks Rewards
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );
